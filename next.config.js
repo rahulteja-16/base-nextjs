@@ -8,6 +8,7 @@ module.exports = {
         remoteType: "var",
         remotes: {
           appcontainer: "appcontainer",
+          currency: "currency",
         },
         shared: {
           react: {
