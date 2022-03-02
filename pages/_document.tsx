@@ -13,7 +13,7 @@ class MyDocument extends Document {
                 <Head />
                 <body>
                     <Main />
-                    <script src="http://localhost:3000/appcontainer.js" />
+                    <script src="http://localhost:3001/appcontainer.js" />
                     <NextScript />
                 </body>
             </Html>

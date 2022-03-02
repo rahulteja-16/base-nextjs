@@ -11,11 +11,11 @@ const HomeProps = {
 
 const Home: NextPage = () => {
   return (
-    <div >
+    <>
         <Container {...HomeProps}>
           Working from NextJS
         </Container>
-    </div>
+    </>
   )
 }
 
