@@ -5,10 +5,16 @@ const Container = dynamic(() => import("appcontainer/AppContainer"), {
   ssr: false,
 });
 
+const HomeProps = {
+  label: 'Rahul Teja'
+}
+
 const Home: NextPage = () => {
   return (
     <div >
-        <Container />
+        <Container {...HomeProps}>
+          Working from NextJS
+        </Container>
     </div>
   )
 }
