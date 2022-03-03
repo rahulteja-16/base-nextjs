@@ -1,7 +1,6 @@
 /** @type {import('next').NextConfig} */
 
 module.exports = {
-  reactStrictMode: true,
   webpack: (config, options) => {
     config.plugins.push(
       new options.webpack.container.ModuleFederationPlugin({
@@ -14,19 +13,14 @@ module.exports = {
           react: {
             eager: true,
             singleton: true,
-            requiredVersion: false,
-          },
-          'styled-components': {
-            eager: true,
-            singleton: true,
-            requiredVersion: false,
+            requiredVersion: false
           },
         },
       })
     );
 
     config.module.rules.push({
-      test: /_app.js/,
+      test: /_app.tsx/,
       loader: "@module-federation/nextjs-mf/lib/federation-loader.js",
     });
 
