@@ -15,6 +15,7 @@ class MyDocument extends Document {
                     <Main />
                     <script src="http://localhost:3001/appcontainer.js" />
                     <script src="http://localhost:3003/currency.js" />
+                    <script src="http://localhost:3004/game.js" />
                     <NextScript />
                 </body>
             </Html>

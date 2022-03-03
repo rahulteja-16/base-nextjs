@@ -8,6 +8,7 @@ module.exports = {
         remotes: {
           appcontainer: "appcontainer",
           currency: "currency",
+          game: "game",
         },
         shared: {
           react: {
