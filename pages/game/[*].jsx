@@ -4,6 +4,7 @@ const GameComponent = dynamic(() => import("../../components/GameApp"), {
 });
 
 const Game = () => {
+    console.log(2);
     return <GameComponent />
 }
 

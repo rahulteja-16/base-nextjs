@@ -12,15 +12,16 @@ export default ({ }) => {
             onNavigate: ({ location: {pathname: nextPathname} }) => {
                 const { asPath } = routerDetails;
                 if (asPath !== nextPathname) {
-                    routerDetails.push(nextPathname);
+                    console.log(1);
+                    routerDetails.push({pathname: nextPathname});
                 }
             },
             initialPath: routerDetails.asPath
         });
 
-        // onParentNavigate(routerDetails.asPath) F
-        // routerDetails.events.on('routeChangeComplete', onParentNavigate);
+        onParentNavigate({pathname: routerDetails.asPath})
+        routerDetails.events.on('routeChangeComplete', (newPath) => onParentNavigate({ pathname: newPath }));
     }, []);
 
-    return <>Game-<div ref={ref} /></>;
+    return <div ref={ref} />;
 };
