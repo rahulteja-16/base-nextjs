@@ -1,7 +1,7 @@
 import dynamic from 'next/dynamic';
-const GameComponent = dynamic(() => import("game/Game"), {
+const GameComponent = dynamic(() => import("../../components/GameApp"), {
     ssr: false,
-    });
+});
 
 const Game = () => {
     return <GameComponent />
