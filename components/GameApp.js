@@ -10,17 +10,18 @@ export default ({ }) => {
     useEffect(() => {
         const { onParentNavigate } =  mount(ref.current, {
             onNavigate: ({ location: {pathname: nextPathname} }) => {
+                console.log(nextPathname, "next");
                 const { asPath } = routerDetails;
                 if (asPath !== nextPathname) {
                     console.log(1);
-                    routerDetails.push({pathname: nextPathname});
+                    routerDetails.push(nextPathname);
                 }
             },
             initialPath: routerDetails.asPath
         });
 
         onParentNavigate({pathname: routerDetails.asPath})
-        routerDetails.events.on('routeChangeComplete', (newPath) => onParentNavigate({ pathname: newPath }));
+        routerDetails.events.on('routeChangeStart', (newPath) => onParentNavigate({ pathname: newPath }));
     }, []);
 
     return <div ref={ref} />;
