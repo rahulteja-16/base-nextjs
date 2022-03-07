@@ -13,9 +13,9 @@ class MyDocument extends Document {
                 <Head />
                 <body>
                     <Main />
-                    <script src="http://localhost:3001/appcontainer.js" />
-                    <script src="http://localhost:3003/currency.js" />
-                    <script src="http://localhost:3004/game.js" />
+                    <script src={process.env.APP_CONTAINER} />
+                    <script src={process.env.APP_CURRENCY} />
+                    <script src={process.env.APP_GAME} />
                     <NextScript />
                 </body>
             </Html>
