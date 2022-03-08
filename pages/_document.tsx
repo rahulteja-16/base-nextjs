@@ -12,6 +12,7 @@ class MyDocument extends Document {
             <Html>
                 <Head />
                 <body>
+                    <div id="modal"></div>
                     <Main />
                     {/* <script src="http://localhost:3001/appcontainer.js" /> */}
                     {/* <script src="http://localhost:3003/currency.js" /> */}
