@@ -5,21 +5,21 @@ import { mount } from 'game/Game';
 
 const GameApp = () => {
     const ref = useRef(null);
-    const routerDetails = useRouter();
+    const router = useRouter();
 
     useEffect(() => {
         const { onParentNavigate } =  mount(ref.current, {
             onNavigate: ({ location: {pathname: nextPathname} }) => {
-                const { asPath } = routerDetails;
+                const { asPath } = router;
                 if (asPath !== nextPathname) {
-                    routerDetails.push(nextPathname);
+                    router.push(nextPathname);
                 }
             },
-            initialPath: routerDetails.asPath
+            initialPath: router.asPath
         });
-        onParentNavigate({pathname: routerDetails.asPath})
-        routerDetails.events.on('routeChangeStart', (newPath) => onParentNavigate({ pathname: newPath }));
-    }, [])
+        onParentNavigate({pathname: router.asPath})
+        router.events.on('routeChangeStart', (newPath) => onParentNavigate({ pathname: newPath }));
+    }, [router])
 
 
     return <div ref={ref} />;

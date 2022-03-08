@@ -12,6 +12,7 @@ class MyDocument extends Document {
             <Html>
                 <Head />
                 <body>
+                    <div id="modal"></div>
                     <Main />
                     <script src={process.env.APP_CONTAINER} />
                     <script src={process.env.APP_CURRENCY} />
