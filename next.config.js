@@ -16,6 +16,11 @@ module.exports = {
             singleton: true,
             requiredVersion: false
           },
+          'styled-components': {
+            eager: true,
+            singleton: true,
+            requiredVersion: false
+          },
         },
       })
     );
